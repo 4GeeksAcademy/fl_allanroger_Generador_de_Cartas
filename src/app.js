@@ -1,11 +1,34 @@
-/* eslint-disable */
-import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+window.onload = () => {
+  document.querySelector(".card").classList.add(generateRadomNaipe());
+  document.querySelector(".card").innerHTML = generateRadomNumber();
+};
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+let generateRadomNaipe = () => {
+  let naipe = ["diamond", "spade", "heart", "club"];
+  let indexNaipe = Math.floor(Math.random() * naipe.length);
+
+  return naipe[indexNaipe];
+};
+
+let generateRadomNumber = () => {
+  let numbers = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "7",
+    "8",
+    "10",
+    "J",
+    "Q",
+    "K"
+  ];
+  let indexNumbers = Math.floor(Math.random() * numbers.length);
+
+  return numbers[indexNumbers];
 };
