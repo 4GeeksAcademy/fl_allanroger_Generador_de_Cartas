@@ -1,6 +1,6 @@
 import "./style.css";
 
-window.onload = () => {
+let updateCard = () => {
   document.querySelector(".card").classList.add(generateRadomNaipe());
   document.querySelector(".card").innerHTML = generateRadomNumber();
 };
@@ -32,3 +32,7 @@ let generateRadomNumber = () => {
 
   return numbers[indexNumbers];
 };
+
+window.onload = updateCard;
+
+document.querySelector(".btn").addEventListener("click", updateCard);

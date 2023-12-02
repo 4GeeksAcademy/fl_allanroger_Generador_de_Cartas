@@ -55,3 +55,16 @@ body {
 .button {
   margin-top: 20px;
 }
+
+.sort {
+  animation: sort 0.2s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes sort {
+  to {
+    transform: translateX(-5px);
+  }
+  from {
+    transform: translateX(5px);
+  }
+}
